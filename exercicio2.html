@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio estagio</title>
+</head>
+<body>
+    <h1>Resultado do exercicio 2:</h1>
+    <div id="resultadoFibo"></div>
+   <script>
+    function verificaFibo(num){
+        let n1 = 0, n2 = 1
+        while(n2 < num){
+            let fibo = n1
+            n1 = n2
+            n2 = fibo + n2
+        } 
+        return n2 === num
+
+    }
+    let resultadoFibo = Number(prompt("Digite um número:"))
+    
+    if(verificaFibo(resultadoFibo)){
+        document.getElementById("resultadoFibo").innerText= `O número ${resultadoFibo} pertence a sequência de Fibonacci`
+    }else{
+        document.getElementById("resultadoFibo").innerText= `O número ${resultadoFibo} não pertence a sequência de Fibonacci`
+    }
+    
+
+   </script> 
+</body>
+</html>
